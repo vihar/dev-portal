@@ -6,7 +6,7 @@
 	{#each posts as post}
 		<li>
 			<article>
-				<a href="/blog/{post.slug}" rel="external">
+				<a href="/blog/{post.slug}" target="_self">
 					<img
 						src={post.coverImage}
 						alt=""
