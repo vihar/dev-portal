@@ -18,6 +18,7 @@
 		on:click={maybeCloseMenu}
 		class:active={isCurrentPage}
 		aria-current={isCurrentPage ? 'page' : false}
+		rel="external"
 	>
 		<slot />
 	</a>
