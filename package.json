@@ -28,6 +28,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@giscus/svelte": "^2.2.4",
 		"autoprefixer": "^10.4.13",
 		"postcss": "^8.4.19",
 		"svelte-navigator": "^3.2.2",

@@ -7,5 +7,5 @@
 			"$lib/*": ["src/lib/*"]
 		}
 	},
-	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]
+	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte", "src/lib/config.ts", "src/lib/assets/js/store.ts", "src/lib/assets/js/fetchPosts.ts", "src/routes/+page.ts", "src/routes/+layout.ts", "src/routes/blog/+page.server.ts", "src/routes/blog/page/+page.server.ts", "src/routes/blog/page/[page]/+page.server.ts", "src/routes/blog/category/+page.server.ts", "src/routes/blog/category/page/[page]/+page.server.ts", "src/routes/blog/category/[category]/+page.server.ts", "src/routes/blog/category/[category]/page/+page.server.ts", "src/routes/blog/category/[category]/page/[page]/+page.server.ts", "src/routes/blog/[post]/+page.server.ts", "src/routes/api/rss.xml/+server.ts", "src/routes/api/posts.json/+server.ts", "src/routes/api/posts/page/[page]/+server.ts", "src/routes/api/posts/count/+server.ts"]
 }
