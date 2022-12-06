@@ -21,7 +21,7 @@ In this blog, I will teach you how to build a frontend that can connect to Airta
 
 On Appsmith, it’s pretty straightforward to establish a connection with any datasource, including Airtable. We need to make the connection to the endpoint, database name, and user credentials. With this in mind, let’s get started.
 
-- Create a new account on [Appsmith](appsmith.com) (it’s free!), if you are an existing user, log in to your Appsmith account.
+- Create a new account on [Appsmith](https://appsmith.com) (it’s free!), if you are an existing user, log in to your Appsmith account.
 - Create a new application under the dashboard under your preferred organization.
 - On your Appsmith application, click on the `+` icon next to Datasources on the left navigation bar under Page1
 - Next, click on the Now, navigate to the Create New tab and choose Airtable datasource; you’ll see the following screenshot:
