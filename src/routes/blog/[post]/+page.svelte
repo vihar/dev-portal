@@ -23,58 +23,60 @@
 	<!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="post">
-	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
-	<img
-		class="cover-image"
-		src={coverImage}
-		alt=""
-		style="aspect-ratio: {coverWidth} / {coverHeight};"
-		width={coverWidth}
-		height={coverHeight}
-	/>
+<div class="mx-auto max-w-7xl py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+	<article class="post">
+		<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
+		<img
+			class="w-full max-w-full h-auto"
+			src={coverImage}
+			alt=""
+			style="aspect-ratio: {coverWidth} / {coverHeight};"
+			width={coverWidth}
+			height={coverHeight}
+		/>
 
-	<h1>{title}</h1>
+		<h1>{title}</h1>
 
-	<div class="meta">
-		<b>Published:</b>
-		{date}
-		<br />
-		<b>Updated:</b>
-		{updated}
+		<div class="meta">
+			<b>Published:</b>
+			{date}
+			<br />
+			<b>Updated:</b>
+			{updated}
+		</div>
+
+		{@html data.PostContent}
+
+		{#if categories}
+			<aside class="post-footer">
+				<h2>Posted in:</h2>
+				<ul>
+					{#each categories as category}
+						<li>
+							<a href="/blog/category/{category}/">
+								{category}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</aside>
+		{/if}
+	</article>
+
+	<div class="comments-container">
+		<Giscus
+			id="comments"
+			repo="vihar/dev-portal"
+			repoId="R_kgDOIiVQuA"
+			category="Q&A"
+			categoryId="DIC_kwDOIiVQuM4CS2hC"
+			mapping="url"
+			term="Welcome to @giscus/svelte component!"
+			reactionsEnabled="1"
+			emitMetadata="0"
+			inputPosition="top"
+			theme="light"
+			lang="en"
+		/>
 	</div>
-
-	{@html data.PostContent}
-
-	{#if categories}
-		<aside class="post-footer">
-			<h2>Posted in:</h2>
-			<ul>
-				{#each categories as category}
-					<li>
-						<a href="/blog/category/{category}/">
-							{category}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</aside>
-	{/if}
-</article>
-
-<div class="comments-container">
-	<Giscus
-		id="comments"
-		repo="vihar/dev-portal"
-		repoId="R_kgDOIiVQuA"
-		category="Q&A"
-		categoryId="DIC_kwDOIiVQuM4CS2hC"
-		mapping="url"
-		term="Welcome to @giscus/svelte component!"
-		reactionsEnabled="1"
-		emitMetadata="0"
-		inputPosition="top"
-		theme="light"
-		lang="en"
-	/>
 </div>
