@@ -26,18 +26,18 @@ On Appsmith, it’s pretty straightforward to establish a connection with any da
 - On your Appsmith application, click on the `+` icon next to Datasources on the left navigation bar under Page1
 - Next, click on the Now, navigate to the Create New tab and choose Airtable datasource; you’ll see the following screenshot:
 
-![CleanShot 2022-03-09 at 13.07.13@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243087147/VIJBtEV4S.png align="left")
+![CleanShot 2022-03-09 at 13.07.13@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243087147/VIJBtEV4S.png)
 
 - All these details can be found under the settings on Airtable.
 
-![CleanShot 2022-03-09 at 13.11.43@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243125646/501gUrmQ0.png align="left")
+![CleanShot 2022-03-09 at 13.11.43@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243125646/501gUrmQ0.png)
 
 - Rename the Datasource to **Airtable** **CRUD** by double-clicking on the existing one.
 - Next, click on the `Test` button at the bottom right of the screen. This will help you with understanding whether your configuration is valid or not. Hit the ‘Save’ button to establish a secure connection between Appsmith and Airtable if it returns a successful message.
 
 Here’s what the configuration would look like:
 
-![CleanShot 2022-03-09 at 13.12.32@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243142923/U9sU2dqET.png align="left")
+![CleanShot 2022-03-09 at 13.12.32@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243142923/U9sU2dqET.png)
 
 ### Adding Seed Data on Airtable
 
@@ -49,7 +49,7 @@ As an example, we’ll be building a Bug Tracker Admin panel on Appsmith. Note t
 
 Here’s how the base looks after the SEED data is copied.
 
-![CleanShot 2022-03-09 at 13.16.22@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243171741/wYVXnfnVA.png align="left")
+![CleanShot 2022-03-09 at 13.16.22@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243171741/wYVXnfnVA.png)
 
 Now, let’s use the table to build our CRUD APP!
 
@@ -67,11 +67,11 @@ Add the Base ID and Table Name (In our case, it’s Table 1) and hit RUN.
 
 Note: You can find the Base ID from the URL or the settings page.
 
-![CleanShot 2022-03-09 at 13.19.04@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243196537/ABcb35VDj.png align="left")
+![CleanShot 2022-03-09 at 13.19.04@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243196537/ABcb35VDj.png)
 
 - This simple query returns all the bug details present in the Airtable base. Hit the RUN button to view all the results.
 
-![CleanShot 2022-03-09 at 13.20.50@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243234834/TXA3vWOvp.png align="left")
+![CleanShot 2022-03-09 at 13.20.50@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243234834/TXA3vWOvp.png)
 
 We now have our query; let's bind this onto the table widget; for this, follow the below steps:
 
@@ -88,7 +88,7 @@ With this, we should see all the data displayed on the table. The column names c
 
 Note: We’ve added some JS to flatten the data from the Airtable API.
 
-![CleanShot 2022-03-09 at 13.22.57@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243280492/QxHeV61LZ.png align="left")
+![CleanShot 2022-03-09 at 13.22.57@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243280492/QxHeV61LZ.png)
 
 ##### **Implementing the Create Operation**
 
@@ -97,7 +97,7 @@ To add the create operation on Airtable, let’s make UI.
 - Drag and drop a button widget onto the canvas. Open its property pane, set the onClick property to `Open a New Modal,` and choose `Create New.`
 - This will open up a new modal now; let’s drag and drop a few widgets to create a form that we can use to add new **_Bugs_** into our database.
 
-![CleanShot 2022-03-09 at 13.23.39@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243308579/fx7ZKCkhq.png align="left")
+![CleanShot 2022-03-09 at 13.23.39@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243308579/fx7ZKCkhq.png)
 
 Here, we have four inputs to add to our bugs. We can configure the default values, labels, and placeholders by selecting the respective property panes. Now, let’s write the query to create a new bug on Airtable.
 
@@ -124,7 +124,7 @@ Here, we have an insert query that collects all the data from the form widgets w
 
 Lastly, we’ll need to configure the submit button; for this, go back to the modal and set the button’s `onClick` property to execute a query and choose `addData` under the events property:
 
-![CleanShot 2022-03-09 at 13.26.34@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243338805/jxUK-Ggfd.png align="left")
+![CleanShot 2022-03-09 at 13.26.34@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243338805/jxUK-Ggfd.png)
 
 ##### Implementing the Update Operation
 
@@ -134,7 +134,7 @@ Now, rename the column to Edit Bug, and click on the cog icon next to it, to con
 
 Now, copy-paste Modal1, rename it to Modal2 and set the onClick property of the Edit Bug button to open Modal2. Here, in the form, we can set the default value to show existing information; to display this, use the **_selectedRow_** property from the table widget.
 
-![CleanShot 2022-03-09 at 13.33.21@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243357303/AdQX4Na3I.png align="left")
+![CleanShot 2022-03-09 at 13.33.21@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243357303/AdQX4Na3I.png)
 
 Let’s write the Edit query:
 
@@ -161,7 +161,7 @@ Here, we have an edit query that collects all the data from the form widgets on 
 
 We’ll now need to configure the submit button; for this, go back to Modal2 and set the button’s onClick property to execute a query and choose `_editData_` under the events property:
 
-![CleanShot 2022-03-09 at 14.06.34@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243394498/kFYO1WLEA.png align="left")
+![CleanShot 2022-03-09 at 14.06.34@2x.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1647243394498/kFYO1WLEA.png)
 
 ##### **Implementing the Delete Operation**
 
