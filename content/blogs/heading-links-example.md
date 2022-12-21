@@ -1,14 +1,15 @@
 ---
-title: "Automatic heading links in mdsvex"
-date: "2021-10-26"
-updated: "2021-11-01"
-categories: 
-  - "sveltekit"
-  - "markdown"
-coverImage: "/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg"
+title: 'Automatic heading links in mdsvex'
+date: '2021-10-26'
+updated: '2021-11-01'
+categories:
+  - 'sveltekit'
+  - 'markdown'
+coverImage: '/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg'
 coverWidth: 16
 coverHeight: 9
 excerpt: Check out how heading links work with this starter in this post.
+author: Vihar Kurama
 ---
 
 Here are some headings:
@@ -32,4 +33,3 @@ Lorem ipsum dolor sit amet
 ###### We're deep in h6 territory now
 
 Lorem ipsum dolor sit amet
-

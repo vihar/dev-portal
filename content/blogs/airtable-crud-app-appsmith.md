@@ -9,6 +9,7 @@ coverImage: '/images/appsmith-arirtable-cover.jpg'
 coverWidth: 16
 coverHeight: 9
 excerpt: Learn to build a CRUD App with Airtable and Appsmith
+author: Vihar
 ---
 
 When building web applications, developers spend a lot of time on backend architecture and building their own database. It is not uncommon to spend a lot of time thinking about the database and how to structure it because ultimately, this is what ensures that the data that’s stored is easily retrieved. This is a time-consuming process, especially when you have to make changes to the database and your data model is not very flexible. The good news is that there are a lot of tools out there that allow you to easily build web applications without having to spend a lot of time on the backend. One of these tools is Airtable, which is a database created by designers for designers and developers. Airtable is a database that you can build on your own, by defining your own structure.

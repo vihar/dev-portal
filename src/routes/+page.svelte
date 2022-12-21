@@ -1,8 +1,8 @@
 <script>
 	import Giscus from '@giscus/svelte';
 	import { siteTitle } from '$lib/config';
-
 	export let data;
+	export let posts = [];
 </script>
 
 <svelte:head>
@@ -14,16 +14,16 @@
 	<div class="isolate bg-white">
 		<main>
 			<div class="relative px-6 lg:px-8">
-				<div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+				<div class="mx-auto max-w-3xl pt-20 pb-32 sm:pt-40 sm:pb-30">
 					<div>
 						<div class="hidden sm:mb-8 sm:flex sm:justify-center">
 							<div
 								class="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
 							>
 								<span class="text-gray-600">
-									Announcing our next round of funding. <a
-										href="#"
-										class="font-semibold text-indigo-600"
+									Announcing our next #HackwWithAppsmith month. <a
+										href="/"
+										class="font-semibold text-orange-600"
 										><span class="absolute inset-0" aria-hidden="true" />Read more
 										<span aria-hidden="true">&rarr;</span></a
 									>
@@ -32,25 +32,24 @@
 						</div>
 						<div>
 							<h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-								Data to enrich your online business
+								Welcome to the Appsmith Community
 							</h1>
 							<p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-								Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
-								commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+								Community is core to the identity of Appsmith!
 							</p>
 							<div class="mt-8 flex gap-x-4 sm:justify-center">
 								<a
-									href="#"
-									class="inline-block rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
+									href="/"
+									class="inline-block rounded-lg bg-orange-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-orange-600 hover:bg-orange-700 hover:ring-orange-700"
 								>
 									Get started
-									<span class="text-indigo-200" aria-hidden="true">&rarr;</span>
+									<span class="text-orange-200" aria-hidden="true">&rarr;</span>
 								</a>
 								<a
-									href="#"
+									href="/"
 									class="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
 								>
-									Live demo
+									Watch the story
 									<span class="text-gray-400" aria-hidden="true">&rarr;</span>
 								</a>
 							</div>
@@ -88,5 +87,63 @@
 				</div>
 			</div>
 		</main>
+	</div>
+</div>
+
+<div class="bg-white px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
+	<div class="relative mx-auto max-w-lg divide-y-2 divide-gray-200 lg:max-w-7xl">
+		<div>
+			<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+				Recent publications
+			</h2>
+			<p class="mt-3 text-xl text-gray-500 sm:mt-4">
+				Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet.
+				Sapien tortor lacus arcu.
+			</p>
+		</div>
+		<div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+			{#each data.posts as post}
+				<a href="/blog/{post.slug}" rel="external">
+					<div>
+						<div>
+							<span class="inline-block">
+								<span
+									class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium capitalize bg-green-100 text-green-800"
+									>{post.categories[0]}</span
+								>
+							</span>
+						</div>
+						<span class="mt-4 block">
+							<p class="text-xl font-semibold text-gray-900">{post.title}</p>
+							<p class="mt-3 text-base text-gray-500">
+								{post.excerpt}
+							</p>
+						</span>
+						<div class="mt-6 flex items-center">
+							<div class="flex-shrink-0">
+								<span>
+									<span class="sr-only">{post.author}</span>
+									<img
+										class="h-10 w-10 rounded-full"
+										src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+										alt=""
+									/>
+								</span>
+							</div>
+							<div class="ml-3">
+								<p class="text-sm font-medium text-gray-900">
+									<span>{post.author}</span>
+								</p>
+								<div class="flex space-x-1 text-sm text-gray-500">
+									<time datetime="2020-02-12">Feb 12, 2020</time>
+									<span aria-hidden="true">&middot;</span>
+									<span>11 min read</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			{/each}
+		</div>
 	</div>
 </div>
