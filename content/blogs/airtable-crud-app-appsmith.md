@@ -4,7 +4,9 @@ date: '2022-12-1'
 updated: '2022-12-1'
 categories:
   - 'airtable'
-  - 'appsmith'
+tags:
+  - 'tag1'
+  - 'tag2'
 coverImage: '/images/appsmith-arirtable-cover.jpg'
 coverWidth: 16
 coverHeight: 9

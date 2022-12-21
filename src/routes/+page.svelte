@@ -2,7 +2,7 @@
 	import Giscus from '@giscus/svelte';
 	import { siteTitle } from '$lib/config';
 	export let data;
-	export let posts = [];
+	export const posts = [];
 </script>
 
 <svelte:head>

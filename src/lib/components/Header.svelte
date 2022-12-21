@@ -8,8 +8,8 @@
 			class="flex w-full items-center justify-between border-b border-orange-500 py-3 lg:border-none"
 		>
 			<div class="flex items-center">
-				<a href="/">
-					<span class="sr-only">Your Company</span>
+				<a href="/" rel="external">
+					<span class="sr-only">Appsmith</span>
 					<img
 						class="h-5 w-auto"
 						src="https://res.cloudinary.com/theappsmith/image/upload/v1671607967/Appsmith_White_logo_jn8mew.svg"

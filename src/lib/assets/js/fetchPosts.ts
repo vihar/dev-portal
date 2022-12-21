@@ -1,8 +1,14 @@
 import { postsPerPage } from '$lib/config';
 
-const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = {}) => {
+const fetchPosts = async ({
+	offset = 0,
+	limit = postsPerPage,
+	category = '',
+	tag = '',
+	author = ''
+} = {}) => {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/content/blogs/*.md')).map(async ([path, resolver]) => {
+		Object.entries(import.meta.glob('/content/blogs/*.md')).map(async ([path, resolver]: any) => {
 			const { metadata } = await resolver();
 			const slug = path.split('/').pop().slice(0, -3);
 			return { ...metadata, slug };
@@ -13,6 +19,14 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
 
 	if (category) {
 		sortedPosts = sortedPosts.filter((post) => post.categories.includes(category));
+	}
+
+	if (tag) {
+		sortedPosts = sortedPosts.filter((post) => post.tags.includes(tag));
+	}
+
+	if (author) {
+		sortedPosts = sortedPosts.filter((post) => post.author.includes(author));
 	}
 
 	if (offset) {
@@ -32,7 +46,8 @@ const fetchPosts = async ({ offset = 0, limit = postsPerPage, category = '' } = 
 		coverHeight: post.coverHeight,
 		date: post.date,
 		categories: post.categories,
-		author: post.author
+		author: post.author,
+		tags: post.tags
 	}));
 
 	return {

@@ -3,9 +3,10 @@ title: 'A Markdown post with a Svelte component'
 date: '2021-12-01'
 updated: '2021-12-01'
 categories:
-  - 'sveltekit'
-  - 'markdown'
-  - 'svelte'
+  - 'Tutorial'
+tags:
+  - 'tag1'
+  - 'tag4'
 coverImage: '/images/jerry-zhang-ePpaQC2c1xA-unsplash.jpg'
 coverWidth: 16
 coverHeight: 9

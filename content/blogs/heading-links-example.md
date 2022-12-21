@@ -4,7 +4,9 @@ date: '2021-10-26'
 updated: '2021-11-01'
 categories:
   - 'sveltekit'
-  - 'markdown'
+tags:
+  - 'tag1'
+  - 'tag3'
 coverImage: '/images/jefferson-santos-fCEJGBzAkrU-unsplash.jpg'
 coverWidth: 16
 coverHeight: 9
