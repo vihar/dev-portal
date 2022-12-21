@@ -2,8 +2,6 @@ export const load = async ({ url, fetch }) => {
 	const res = await fetch(`${url.origin}/api/posts.json`);
 	let posts = await res.json();
 
-	console.log(posts);
-
 	let uniqueAuthors = {};
 
 	posts.forEach((post) => {
@@ -16,7 +14,6 @@ export const load = async ({ url, fetch }) => {
 			};
 		}
 	});
-	console.log(uniqueAuthors);
 
 	const sorteduniqueAuthors = Object.values(uniqueAuthors).sort((a, b) => a.title > b.title);
 

@@ -1,7 +1,6 @@
 <script>
 	export let data;
 	const { uniqueAuthors } = data;
-	console.log(uniqueAuthors, 'uniqueAuthor');
 </script>
 
 <svelte:head>
