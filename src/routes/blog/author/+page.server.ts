@@ -9,7 +9,7 @@ export const load = async ({ url, fetch }) => {
 			uniqueAuthors[post.author].count += 1;
 		} else {
 			uniqueAuthors[post.author] = {
-				title: post.author,
+				title: post.author.toLocaleLowerCase().replaceAll(' ', ''),
 				count: 1
 			};
 		}

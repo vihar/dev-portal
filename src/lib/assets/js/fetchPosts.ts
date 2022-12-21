@@ -26,7 +26,11 @@ const fetchPosts = async ({
 	}
 
 	if (author) {
-		sortedPosts = sortedPosts.filter((post) => post.author.includes(author));
+		sortedPosts = sortedPosts.filter(
+			(post) =>
+				post.author.toLocaleLowerCase().replaceAll(' ', '') ===
+				author.toLocaleLowerCase().replaceAll(' ', '')
+		);
 	}
 
 	if (offset) {

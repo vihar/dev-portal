@@ -1,6 +1,6 @@
 import fetchPosts from '$lib/assets/js/fetchPosts';
 
-export const load = async ({ params }) => {
+export const load = async ({ params }: any) => {
 	const author = params.author;
 	const options = { author };
 	const { posts } = await fetchPosts(options);
