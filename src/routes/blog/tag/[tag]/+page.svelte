@@ -10,8 +10,6 @@
 	<title>Tag: {data.tag}</title>
 </svelte:head>
 
-<h1>Blog tag: {data.tag}</h1>
-
 {#if data.posts.length}
 	<PostsList posts={data.posts} />
 	<Pagination currentPage="1" totalPosts={data.total} path="/blog/tag/{data.tag}/page" />

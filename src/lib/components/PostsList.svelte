@@ -24,19 +24,19 @@
 						<div class="flex flex-1 flex-col justify-between bg-white p-6">
 							<div class="flex-1">
 								<p class="text-sm font-medium text-indigo-600">
-									<a href="/blog/{post.slug}" class="hover:underline">Article</a>
+									<span class="hover:underline uppercase">{post.categories[0]}</span>
 								</p>
-								<a href="/blog/{post.slug}" class="mt-2 block">
+								<span class="mt-2 block">
 									<p class="text-xl font-semibold text-gray-900">{post.title}</p>
 									<p class="mt-3 text-base text-gray-500">
 										{post.excerpt}
 									</p>
-								</a>
+								</span>
 							</div>
 							<div class="mt-6 flex items-center">
 								<div class="flex-shrink-0">
 									<a href="/blog/{post.slug}">
-										<span class="sr-only">Roel Aufderehar</span>
+										<span class="sr-only">{post.author}</span>
 										<img
 											class="h-10 w-10 rounded-full"
 											src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -46,7 +46,7 @@
 								</div>
 								<div class="ml-3">
 									<p class="text-sm font-medium text-gray-900">
-										<a href="/blog/{post.slug}" class="hover:underline">Roel Aufderehar</a>
+										<a href="/blog/{post.slug}" class="hover:underline">{post.author}</a>
 									</p>
 									<div class="flex space-x-1 text-sm text-gray-500">
 										<time datetime="2020-03-16">Mar 16, 2020</time>

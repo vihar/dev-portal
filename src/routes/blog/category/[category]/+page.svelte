@@ -1,18 +1,14 @@
 <!-- Renders any page at /blog/category/* -->
 <script>
-	import PostsList from '$lib/components/PostsList.svelte'
-	import Pagination from '$lib/components/Pagination.svelte'
+	import PostsList from '$lib/components/PostsList.svelte';
+	import Pagination from '$lib/components/Pagination.svelte';
 
-	export let data
+	export let data;
 </script>
-
 
 <svelte:head>
 	<title>Category: {data.category}</title>
 </svelte:head>
-
-
-<h1>Blog category: {data.category}</h1>
 
 {#if data.posts.length}
 	<PostsList posts={data.posts} />
