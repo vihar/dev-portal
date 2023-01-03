@@ -2,7 +2,14 @@
 
 This starter contains everything you need to get up and running with SvelteKit as a static site generator for your Markdown (and Svelte)-powered blog. Check out the demo [here](https://dev-portal-lovat.vercel.app/), or view the GitHub repo [here](https://github.com/vihar/dev-portal).
 
-### Features
+## Tech Stack
+
+- Sveltekit for frontend
+- Tailwind CSS for UI
+- Gisucss for Comments and Discussions
+- Vercel to deploy
+
+## Features
 
 📦 Zero-config preloading for automatic, fast background preloading of all top-level pages
 
@@ -22,7 +29,7 @@ This starter contains everything you need to get up and running with SvelteKit a
 
 📱 Responsive and accessible defaults; includes a "skip to content" link and accessible mobile nav menu
 
-### Quick Start
+## Quick Start
 
 Clone or download this repo, then install the dependencies and run the dev server:
 
@@ -41,7 +48,7 @@ Now all you need to do is:
 - Drop your Markdown posts into `content/blogs`
 - Optionally, customize the styles in lib/assets/scss
 
-### Building and deploying
+## Building and deploying
 
 The build command (from package.json) is simply:
 
@@ -53,7 +60,7 @@ That should do it on a host like Netlify or Vercel. Or, if you prefer, you can r
 
 Use npm run preview after a build to preview the built site.
 
-### Deploy your own
+## Deploy your own
 
 Deploy the example using Vercel:
 
