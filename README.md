@@ -5,13 +5,21 @@ This starter contains everything you need to get up and running with SvelteKit a
 ### Features
 
 📦 Zero-config preloading for automatic, fast background preloading of all top-level pages
+
 ✍️ Markdown support with a pre-configured blog
+
 📑 Pagination included (can customize posts per page)
+
 ✅ Category pages included
+
 💬 Posts JSON API
+
 💅 Sass pre-installed and -configured
+
 📝 mdsvex pre-installed--use Svelte components inside Markdown!
+
 🔗 Rehype plugins are included to generate unique heading IDs, for direct linking
+
 📱 Responsive and accessible defaults; includes a "skip to content" link and accessible mobile nav menu
 
 ### Quick Start
